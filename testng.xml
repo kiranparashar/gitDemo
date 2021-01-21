@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MobileControllerAPI" verbose="3" allow-return-values="true">
+	<parameter name="workBookName" value="SanityTestData" />
+	<!-- <parameter name="DataDriver" value="OPENEXCEL" /> -->
+	<parameter name="DataDriver" value="GOOGLESHEET" />
+	<parameter name="spreadsheetId" value="1QUKt7f35ynketbHZMdsPAkz1gGChXNk_-kaItx3WrzM" />
+
+	<test name="FlightFlow" parallel="true">
+		<parameter name="sheet" value="FlightFlow" />
+		<classes>
+			<class name="com.yatra.testscripts.FlightFlowTest">
+			</class>
+		</classes>
+	</test>
+	 
+	<test name="FlightSearch" parallel="true">
+		<parameter name="sheet" value="FlightSearch" />
+		<classes>
+			<class name="com.yatra.testscripts.FlightSearchTest">
+			</class>
+		</classes>
+	</test>
+	<test name="FlightPricing" parallel="true">
+		<parameter name="sheet" value="FlightPricing" />
+		<classes>
+			<class name="com.yatra.testscripts.FlightPricingTest">
+			</class>
+		</classes>
+	</test>
+	
+	<test name="FlightPromoCode" parallel="true">
+	    <parameter name="sheet" value="FlightPromo"></parameter>
+		<classes>
+			<class name="com.yatra.testscripts.FlightPromoTest">
+			</class>
+		</classes>
+	</test>
+	
+	<test name="OtherAPI" parallel="true">
+	    <parameter name="sheet" value="OtherAPI"></parameter>
+		<classes>
+			<class name="com.yatra.testscripts.TestOtherAPI">
+			</class>
+		</classes>
+	</test>
+	 
+	
+	
+</suite> 
